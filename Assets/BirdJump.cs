@@ -19,6 +19,7 @@ public class BirdJump : MonoBehaviour
         {
             //velocity는 속도
             //(0,3) 벡터2는 2차원 좌표
+            //커밋테스트
             rb.velocity = Vector2.up * jumpPower;
         }
     }
