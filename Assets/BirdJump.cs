@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BirdJump : MonoBehaviour
 {
@@ -21,6 +23,11 @@ public class BirdJump : MonoBehaviour
             //(0,3) 벡터2는 2차원 좌표
             //커밋테스트
             rb.velocity = Vector2.up * jumpPower;
+            GetComponent<AudioSource>().Play();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        SceneManager.LoadScene("GameOverScene");
     }
 }

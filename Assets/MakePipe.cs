@@ -10,7 +10,8 @@ public class MakePipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject newpipe = Instantiate(pipe);
+        newpipe.transform.position = new Vector3(3,Random.Range(-1.1f, 5.5f),0);
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class MakePipe : MonoBehaviour
         timer += Time.deltaTime;
         if(timer >= timeDiff){
             GameObject newpipe = Instantiate(pipe);
-            newpipe.transform.position = new Vector3(6,Random.Range(-1.1f, 5.5f),0);
+            newpipe.transform.position = new Vector3(3,Random.Range(-1.1f, 5.5f),0);
             Destroy(newpipe,10);
             timer = 0;
 
